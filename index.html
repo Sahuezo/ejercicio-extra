@@ -14,8 +14,8 @@
             font-family: sans-serif;
         }
         .screen{
-            width: 600px;
-            height: 600px;
+            width: 400px;
+            height: 400px;
             background: lightslategrey;
             display: flex;
             justify-content: center;
@@ -60,44 +60,16 @@
             background: #0e53ad;
         }
     </style>
+
 </head>
 <body>
     <div class="screen" id="screen"></div>
     <div class="btnBox">
-        <button class="btn red">Rojo</button>
-        <button class="btn green">Verde</button>
-        <button class="btn blue">Azul</button>
-        <button class="btn">Limpiar</button>
+        <button class="btn red" id="rojo">Rojo</button>
+        <button class="btn green" id="verde">Verde</button>
+        <button class="btn blue" id="azul">Azul</button>
+        <button class="btn" id="limpiar">Limpiar</button>
     </div>
-<script>
-
-//variables
-/**/
-let screen = document.getElementById('screen');
-screen.style.height='400px';
-screen.style.width="800px";
-
-
-const btnBox = document.querySelectorAll('.btn');
-const btn = document.getElementsByTagName('button');
-//const xyz = ['btn red', 'btn green', 'btn blue', 'btn'];
-
-const limpiartexto = document.getElementsByClassName('.btn');
-
-//eventos 
-//xyz.addEventListener('click', limpiartexto);
-btnBox.forEach(btn=>{
-    btn.addEventListener('clic', estrella);
-}) 
-
-//funciones 
-
-
-function estrella(){
-    console.log('sifunciono')
-}
-
-</script>
 
 
 
@@ -108,19 +80,20 @@ function estrella(){
     let screen = document.getElementById('screen');
     const btnBox = document.querySelectorAll('.btn');
     
-    console.log(btnBox)
-    //const btn = document.getElementsByTagName('button');
-    //const xyz = ['btn red', 'btn green', 'btn blue', 'btn'];
     
     btnBox.forEach(btn=>{
         btn.addEventListener('click', cambiarcolor);
     }) 
     
-    function cambiarcolor(){
-        console.log('sifunciono')
-    }
-    
-    </script>
+    function cambiarcolor(e){
+        const id=e.target.id
 
+        
+        console.log(e.target.id);
+    }
+
+
+
+</script>
 </body>
 </html>
