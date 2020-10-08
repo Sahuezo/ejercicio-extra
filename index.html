@@ -86,10 +86,33 @@
     }) 
     
     function cambiarcolor(e){
-        const id=e.target.id
-
+        const id=e.target.id 
         
-        console.log(e.target.id);
+        switch (id) {
+                case 'rojo':
+                   screen.className='screen rojo';
+                   screen.textContent='rojo';
+                    break;
+                case 'azul':
+                    console.log('#azul');
+                    screen.className='screen azul';
+                   screen.textContent='azul';
+                    break;
+                case 'verde':
+                    console.log('#verde');
+                    screen.className='scree verde';
+                   screen.textContent='verde';
+                    break;
+                case 'limpiar':
+                    console.log('#limpiar');
+                    screen.className='screen';
+                   screen.textContent='';
+                    break;
+            }
+  
+        //console.log(e.target.id);
+
+
     }
 
 
